@@ -17,18 +17,17 @@ app.use('/api/profile', require('./routes/api/profile'));
 app.use('/api/posts', require('./routes/api/posts'));
 
 // Serve static assets in production
-if (process.env.NODE_ENV === 'production') {
-  // Set static folder
-  console.log('Serving asseets'); 
-  app.use(express.static('client/build'));
-  console.log('Serving asseets1'); 
-  app.get('*', (req, res) => {
-
-    console.log('Serving asseets3'); 
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-    console.log('Serving asseets4'); 
-  });
-}
+// if (process.env.NODE_ENV === 'production') {
+// Set static folder
+console.log('Serving asseets');
+app.use(express.static('client/build'));
+console.log('Serving asseets1');
+app.get('*', (req, res) => {
+  console.log('Serving asseets3');
+  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  console.log('Serving asseets4');
+});
+// }
 
 const PORT = process.env.PORT || 5000;
 
