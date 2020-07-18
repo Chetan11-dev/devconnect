@@ -35,8 +35,6 @@ npm run build
 
 ## App Info
 
-### Author
-
+### Credits
+I learnt the project in Brad Traversy Mern Stack Course
 Chetan Jain
-
-This project is licensed under the MIT License
